@@ -1,0 +1,19 @@
+# No tracking stuff
+.vs
+.vscode
+**/*test*
+**/*temp*
+**/*.inp
+**/*.out
+
+# Scripts
+scripts/build/*
+scripts/dist/*
+scripts/*.spec
+
+# VS
+**/x64
+*Bai*/*.exe
+
+# Python
+**/*.py
