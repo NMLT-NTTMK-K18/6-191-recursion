@@ -9,7 +9,6 @@ int Closest(float[], int, float&, float&);
 
 int main()
 {
-	cout << "Problem XXX - To Vinh Tien - 22521474" << endl;
 	int n = 0;
 	while (n <= 0)
 	{
