@@ -10,7 +10,7 @@ int main()
 	cin >> k;
 	float kq = Tong(k);
 	cout << "Tong la: " << kq;
-	return 1;
+	return 0;
 }
 
 float Tong(int n)

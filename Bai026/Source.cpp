@@ -1,16 +1,20 @@
-#include<iostream>
-#include<cmath>
+#include <iostream>
+#include <cmath>
 using namespace std;
+
 float sum(int);
+
 int main()
 {
     int n;
+    cout << "Nhap n: ";
     cin >> n;
+
     float kq = sum(n);
-    cout << kq;
+    cout << "Sn: " << kq << endl;
     return 0;
-	 
 }
+
 float sum(int n)
 {
     if (n == 0)

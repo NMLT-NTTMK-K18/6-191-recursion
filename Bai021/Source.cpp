@@ -12,7 +12,7 @@ int main()
 	cin >> y;
 	float kq = Tong(y, k);
 	cout << "Ket qua la: " << kq;
-	return 1;
+	return 0;
 }
 
 float Tong(float x, int n)

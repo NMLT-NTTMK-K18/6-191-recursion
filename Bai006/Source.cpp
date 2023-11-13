@@ -13,9 +13,9 @@ int main()
 	return 0;
 }
 
-float Tong(int n) {
-	if (n == 0) {
+float Tong(int n)
+{
+	if (n == 0)
 		return 0;
-	}
 	return Tong(n - 1) + (float)n / (n + 1);
 }

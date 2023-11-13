@@ -1,39 +1,33 @@
 #include <iostream>
-#include <limits>
-#include <iomanip>
 using namespace std;
 
-bool EvenExisted(int);
+int TonTaiChan(int);
 
 int main()
 {
     int n;
-    cout << "\nEnter the value of n:           ";
+    cout << "Nhap n: ";
     cin >> n;
-    while (n > INT_MAX || n < 0)
-    {
-        cout << "The inputted value of n is invalid. Please re-enter the value of n." << endl;
-        cout << "\nEnter the value of n:        ";
-        cin >> n;
-    }
-    if (EvenExisted(n) == true)
-        cout << "\nIn the number " << n << " exists even digits." << endl;
+
+    if (TonTaiChan(n) == true)
+        cout << "So " << n << " co ton tai so chan" << endl;
     else
-        cout << "\n In the number " << n << " doesn't exists even digits." << endl;
+        cout << "So " << n << " khong ton tai so chan" << endl;
     cout << endl;
     return 0;
 }
 
-bool EvenExisted(int n)
+int TonTaiChan(int n)
 {
     n = abs(n);
     if (n <= 9)
     {
         if (n % 2 == 0)
-            return true;
-        return false;
+            return 1;
+        return 0;
     }
-    int unit = n % 10;
-    if (unit % 2 == 0)
-        return true;
+    int dv = n % 10;
+    if (dv % 2 == 0)
+        return 1;
+    return TonTaiChan(n / 10);
 }
