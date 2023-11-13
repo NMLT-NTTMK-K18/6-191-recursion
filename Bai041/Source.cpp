@@ -7,7 +7,6 @@ bool EvenExisted(int);
 
 int main()
 {
-    cout << "Problem 041 - To Vinh Tien - 22521474" << endl;
     int n;
     cout << "\nEnter the value of n:           ";
     cin >> n;
