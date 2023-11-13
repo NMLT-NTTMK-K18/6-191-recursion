@@ -9,7 +9,6 @@ int MaxPrimeEle(int[], int);
 
 int main()
 {
-	cout << "Problem 131 - To Vinh Tien - 22521474" << endl;
 	int n = 0;
 	while (n <= 0)
 	{
