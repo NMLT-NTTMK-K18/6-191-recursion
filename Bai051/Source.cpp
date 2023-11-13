@@ -1,6 +1,5 @@
 #include <iostream>
 #include <iomanip>
-#include <cmath>
 using namespace std;
 
 int S(int);
@@ -14,12 +13,11 @@ int main()
 	return 0;
 }
 
-int S(int n) {
-	if (n == 0) {
+int S(int n)
+{
+	if (n == 0)
 		return 0;
-	}
-	if (n == 1) {
+	if (n == 1)
 		return 1;
-	}
 	return (1 + n) * S(n - 1) - n * S(n - 2);
 }

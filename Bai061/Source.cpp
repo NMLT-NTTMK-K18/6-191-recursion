@@ -5,7 +5,7 @@
 #include <cmath>
 using namespace std;
 
-void Input(int[], int&);
+void Input(int[], int &);
 void QuickSort(int[], int, int);
 void Output(int[], int);
 
@@ -19,11 +19,12 @@ int main()
 	return 0;
 }
 
-void Input(int a[], int& n)
+void Input(int a[], int &n)
 {
 	cout << "Nhap n: ";
 	cin >> n;
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < n; i++)
+	{
 		cout << "Phan thu thu " << i << " la: ";
 		cin >> a[i];
 	}
