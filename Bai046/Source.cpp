@@ -1,26 +1,33 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-long long a(int);
-long long b(int);
+
+int TinhAn(int);
+int TinhBn(int);
 int main()
 {
 	int n;
 	cin >> n;
-	long long kq = a(n);
-	long long kq2 = b(n);
-	cout << kq << " " << kq2;
+	int kq1 = TinhAn(n);
+	int kq2 = TinhBn(n);
+	cout << "a thu " << n << " : " << kq1 << endl;
+	cout << "b thu " << n << " : " << kq2 << endl;
 	return 0;
 }
-long long a(int n)
+
+int TinhAn(int n)
 {
 	if (n == 1)
 		return 2;
-	return 3 * b(n - 1) + 2 * a(n - 1);
-
+	int x = TinhAn(n - 1);
+	int y = TinhBn(n - 1);
+	return (3 * y + 2 * x);
 }
-long long b(int n)
+
+int TinhBn(int n)
 {
 	if (n == 1)
 		return 1;
-	return a(n - 1) + 3 * b(n - 1);
+	int x = TinhAn(n - 1);
+	int y = TinhBn(n - 1);
+	return (x + 3 * y);
 }
