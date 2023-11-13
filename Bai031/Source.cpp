@@ -1,8 +1,23 @@
 #include <iostream>
+
 using namespace std;
+
+int TinhAn(int);
+
+int TinhAn(int n)
+{
+	if (n == 1)
+		return -2;
+	return 5 * TinhAn(n - 1) + 12;
+}
 
 int main()
 {
+	int k;
+	cout << "Nhap n: ";
+	cin >> k;
 
-	return 0;
+	int kq = TinhAn(k);
+	cout << "Ket qua la: " << kq;
+	return 1;
 }
