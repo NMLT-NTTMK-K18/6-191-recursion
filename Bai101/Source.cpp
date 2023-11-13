@@ -9,7 +9,6 @@ int PerfNumCount(int[], int);
 
 int main()
 {
-	cout << "Problem 101 - To Vinh Tien - 22521474" << endl;
 	int n = 0;
 	while (n <= 0)
 	{
