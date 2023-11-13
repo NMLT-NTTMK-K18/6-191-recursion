@@ -9,7 +9,6 @@ void DelPos(float[], int&, int);
 
 int main()
 {
-	cout << "Problem 161 - To Vinh Tien - 22521474" << endl;
 	int n = 0, pos;
 	while (n <= 0)
 	{
