@@ -2,31 +2,29 @@
 #include <iomanip>
 using namespace std;
 
-void Input(int[], int&);
+void Input(int[], int &);
 void Output(int[], int);
 bool PerfNumChk(int);
 int PerfNumCount(int[], int);
 
 int main()
 {
-	int n = 0;
-	while (n <= 0)
-	{
-		cout << "\nEnter n:		";
-		cin >> n;
-	}
-	int* arr = new int[n];
+	int n;
+	cout << "Nhap n";
+	cin >> n;
+
+	int *arr = new int[n];
 	Input(arr, n);
-	cout << "\nYour inputted array is:" << endl;
+	cout << "Array vua nhap:" << endl;
 	Output(arr, n);
-	int counter = PerfNumCount(arr, n);
-	cout << "The number of perfect number in the inputted array is: " << counter << ".";
-	delete[]arr;
-	cout << endl;
-	return 1;
+
+	cout << "So cac so hoan thien trong array: " << PerfNumCount(arr, n) << endl;
+
+	delete[] arr;
+	return 0;
 }
 
-void Input(int arr[], int& n)
+void Input(int arr[], int &n)
 {
 	cout << "\nYour inputted array will have " << n << " elements." << endl;
 	for (int i = 0; i < n; i++)
@@ -60,8 +58,5 @@ int PerfNumCount(int arr[], int n)
 {
 	if (n == 0)
 		return 0;
-	int counter = PerfNumCount(arr, n - 1);
-	if (PerfNumChk(arr[n - 1]) == true)
-		counter++;
-	return counter;
+	return PerfNumCount(arr, n - 1) + (PerfNumChk(arr[n - 1]) ? 1 : 0);
 }

@@ -2,35 +2,33 @@
 #include <iomanip>
 using namespace std;
 
-void Input(float[], int&);
-void Enumerate(float[], int);
+void Input(float[], int &);
+void LietKe(float[], int);
 void Output(float[], int);
 
 int main()
 {
-	int n = 0;
-	while (n <= 0)
-	{
-		cout << "\nEnter n:		";
-		cin >> n;
-	}
-	float* arr = new float[n];
+	int n;
+	cout << "Nhap n: ";
+	cin >> n;
+
+	float arr[100];
 	Input(arr, n);
-	cout << "\nYour inputted array is:" << endl;
+
+	cout << "Array vua nhap:" << endl;
 	Output(arr, n);
-	cout << "\nAll the negative elements in the inputted array:" << endl;
-	Enumerate(arr, n);
-	delete[]arr;
-	cout << endl;
-	return 1;
+
+	cout << "Array cac so am:" << endl;
+	LietKe(arr, n);
+
+	return 0;
 }
 
-void Input(float arr[], int& n)
+void Input(float arr[], int &n)
 {
-	cout << "\nYour inputted array will have " << n << " elements." << endl;
 	for (int i = 0; i < n; i++)
 	{
-		cout << "Enter arr[" << i << "] element:	";
+		cout << "arr[" << i << "]:";
 		cin >> arr[i];
 	}
 }
@@ -41,16 +39,16 @@ void Output(float arr[], int n)
 	{
 		if (i % 20 == 0 && i != 0)
 			cout << endl;
-		cout << setw(10) << setprecision(6) << arr[i];
+		cout << setw(10) << setprecision(3) << arr[i];
 	}
 	cout << endl;
 }
 
-void Enumerate(float arr[], int n)
+void LietKe(float arr[], int n)
 {
 	if (n == 0)
 		return;
-	Enumerate(arr, n - 1);
-	if (arr[n - 1] < 0)			
-		cout << setw(10) << setprecision(6) << arr[n - 1];
+	LietKe(arr, n - 1);
+	if (arr[n - 1] < 0)
+		cout << setw(10) << setprecision(3) << arr[n - 1];
 }
