@@ -15,6 +15,7 @@ int main()
 	cout << "Vi tri = " << TimViTri(a, n);
 	return 0;
 }
+
 int TimViTri(float a[], int n)
 {
 	if (n == 1)
