@@ -27,12 +27,13 @@ void Nhap(int a[][100], int& m, int& n)
 
 bool ktDang2m(int k)
 {
-	static bool flag = 1;
-	if (k == 0)
-		return flag;
-	if (k % 2 != 0)
-		flag = 0;
-	ktDang2m(k / 2);
+	if (k < 1)
+		return 0;
+	bool flag = 1;
+	for (int i = k; i > 1; i /= 2)
+		if (i % 2 != 0)
+			flag = 0;
+	return flag;
 }
 
 int DemDang2m(int a[][100], int m, int n)
