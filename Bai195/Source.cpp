@@ -28,7 +28,13 @@ void Nhap(int a[][100], int& m, int& n)
 
 bool ktNguyenTo(int k)
 {
-
+	int dem = 0;
+	for (int i = 1; i <= k; i++)
+		if (k % i == 0)
+			dem++;
+	if (dem == 2)
+		return 1;
+	return 0;
 }
 
 void LietKe(int a[][100], int m, int n)
