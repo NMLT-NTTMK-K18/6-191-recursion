@@ -8,7 +8,7 @@ void LietKe(float[][100], int, int);
 
 int main()
 {
-	int m, n, d;
+	int m, n;
 	float a[100][100];
 	Nhap(a, m, n);
 	LietKe(a, m, n);
