@@ -33,5 +33,4 @@ List các file `Source.cpp` chưa làm:
 28.	[Bai259](../Bai259/Source.cpp)
 29.	[Bai264](../Bai264/Source.cpp)
 30.	[Bai269](../Bai269/Source.cpp)
-31.	[Bai274](../Bai274/Source.cpp)
-32.	[Bai287](../Bai287/Source.cpp)
+31.	[Bai287](../Bai287/Source.cpp)
